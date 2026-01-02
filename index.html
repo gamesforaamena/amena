@@ -27,7 +27,7 @@
         .container {
             background: white;
             border-radius: 20px;
-            padding: 20px;
+            padding: 15px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             width: 100%;
             height: 100vh;
@@ -40,8 +40,8 @@
         h1 {
             text-align: center;
             color: #667eea;
-            font-size: 1.8em;
-            margin-bottom: 15px;
+            font-size: 1.5em;
+            margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
 
@@ -61,11 +61,11 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 30px;
+            gap: 20px;
         }
 
         .logo {
-            font-size: 5em;
+            font-size: 4em;
             animation: float 3s ease-in-out infinite;
         }
 
@@ -74,13 +74,40 @@
             50% { transform: translateY(-20px); }
         }
 
+        .voice-selector {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .voice-label {
+            color: #764ba2;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+            text-align: center;
+        }
+
+        .voice-select {
+            width: 100%;
+            padding: 12px;
+            font-size: 1em;
+            border: 3px solid #667eea;
+            border-radius: 15px;
+            background: white;
+            color: #764ba2;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
         .start-btn {
-            padding: 20px 50px;
+            padding: 18px 45px;
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             color: white;
             border: none;
             border-radius: 30px;
-            font-size: 1.8em;
+            font-size: 1.6em;
             font-weight: bold;
             cursor: pointer;
             box-shadow: 0 10px 25px rgba(0,0,0,0.3);
@@ -93,33 +120,33 @@
         }
 
         .game-content {
-            flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            height: 100%;
         }
 
         .top-section {
             text-align: center;
+            flex-shrink: 0;
         }
 
         .progress {
             color: #764ba2;
-            font-size: 1em;
-            margin-bottom: 10px;
+            font-size: 0.9em;
+            margin-bottom: 8px;
             font-weight: bold;
         }
 
         .word-image {
-            font-size: 4em;
-            margin: 10px 0;
+            font-size: 3.5em;
+            margin: 8px 0;
         }
 
         .instruction {
             color: #764ba2;
-            font-size: 1.3em;
+            font-size: 1.2em;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .speak-btn {
@@ -127,33 +154,41 @@
             color: white;
             border: none;
             border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            font-size: 2em;
+            width: 55px;
+            height: 55px;
+            font-size: 1.8em;
             cursor: pointer;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            margin: 0 auto 10px;
+            margin: 0 auto 8px;
             display: block;
+        }
+
+        .middle-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 0;
         }
 
         .target-boxes {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin: 20px 0;
+            gap: 8px;
+            margin: 15px 0;
             flex-wrap: wrap;
         }
 
         .target-box {
-            width: 70px;
-            height: 80px;
-            border: 4px dashed #764ba2;
-            border-radius: 15px;
+            width: 65px;
+            height: 75px;
+            border: 3px dashed #764ba2;
+            border-radius: 12px;
             background: #f0f0ff;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2em;
+            font-size: 1.8em;
             font-weight: bold;
             color: #667eea;
             transition: all 0.3s ease;
@@ -174,21 +209,21 @@
         .letter-tiles {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 8px;
             flex-wrap: wrap;
-            margin: 20px 0;
-            min-height: 85px;
+            margin: 15px 0;
+            min-height: 75px;
         }
 
         .letter-tile {
-            width: 70px;
-            height: 70px;
+            width: 65px;
+            height: 65px;
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            border-radius: 15px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2em;
+            font-size: 1.8em;
             font-weight: bold;
             color: white;
             cursor: pointer;
@@ -228,8 +263,8 @@
 
         .success-content {
             background: white;
-            padding: 40px;
-            border-radius: 30px;
+            padding: 35px;
+            border-radius: 25px;
             text-align: center;
             animation: bounceIn 0.5s ease;
         }
@@ -241,7 +276,7 @@
         }
 
         .success-emoji {
-            font-size: 5em;
+            font-size: 4.5em;
             animation: rotate 1s ease;
         }
 
@@ -251,10 +286,10 @@
         }
 
         .success-text {
-            font-size: 2em;
+            font-size: 1.8em;
             color: #4CAF50;
             font-weight: bold;
-            margin-top: 20px;
+            margin-top: 15px;
         }
 
         @keyframes shake {
@@ -265,18 +300,19 @@
 
         .btn-container {
             display: flex;
-            gap: 10px;
+            gap: 8px;
             justify-content: center;
             padding: 10px 0;
+            flex-shrink: 0;
         }
 
         .btn {
-            padding: 12px 25px;
+            padding: 12px 20px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
-            border-radius: 20px;
-            font-size: 1.1em;
+            border-radius: 18px;
+            font-size: 1em;
             font-weight: bold;
             cursor: pointer;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
@@ -290,7 +326,17 @@
             <h1>🌟 Aamena's Word Spelling Game 🌟</h1>
             <div class="menu-content">
                 <div class="logo">📚✨</div>
-                <button class="start-btn" id="startBtn">شروع کریں<br>(Start)</button>
+                
+                <div class="voice-selector">
+                    <label class="voice-label">Choose Voice:</label>
+                    <select class="voice-select" id="voiceSelect">
+                        <option value="ur-PK">Urdu (اردو)</option>
+                        <option value="en-US">English</option>
+                        <option value="en-GB">English (UK)</option>
+                    </select>
+                </div>
+                
+                <button class="start-btn" id="startBtn">Start Game</button>
             </div>
         </div>
 
@@ -304,11 +350,13 @@
                     <div class="instruction" id="instruction"></div>
                 </div>
                 
-                <div class="target-boxes" id="targetBoxes"></div>
-                <div class="letter-tiles" id="letterTiles"></div>
+                <div class="middle-section">
+                    <div class="target-boxes" id="targetBoxes"></div>
+                    <div class="letter-tiles" id="letterTiles"></div>
+                </div>
 
                 <div class="btn-container">
-                    <button class="btn" id="nextBtn">اگلا لفظ →</button>
+                    <button class="btn" id="nextBtn">Next Word →</button>
                 </div>
             </div>
         </div>
@@ -317,22 +365,22 @@
     <div class="success-overlay" id="successOverlay">
         <div class="success-content">
             <div class="success-emoji">🎉</div>
-            <div class="success-text" id="successText">شاباش آمنہ!</div>
+            <div class="success-text" id="successText">Great Job Aamena!</div>
         </div>
     </div>
 
     <script>
         const w=[{word:'AT',emoji:'📍',urdu:'ایٹ'},{word:'AN',emoji:'🅰️',urdu:'اِن'},{word:'AM',emoji:'🌅',urdu:'ایم'},{word:'BAT',emoji:'🦇',urdu:'بَیٹ'},{word:'CAT',emoji:'🐱',urdu:'کَیٹ'},{word:'FAT',emoji:'🎈',urdu:'فَیٹ'},{word:'HAT',emoji:'🎩',urdu:'ہَیٹ'},{word:'MAT',emoji:'🧘',urdu:'مَیٹ'},{word:'PAT',emoji:'👋',urdu:'پَیٹ'},{word:'RAT',emoji:'🐀',urdu:'رَیٹ'},{word:'SAT',emoji:'🪑',urdu:'سَیٹ'},{word:'VAT',emoji:'🪣',urdu:'وَیٹ'},{word:'TAT',emoji:'✏️',urdu:'ٹَیٹ'},{word:'BAN',emoji:'🚫',urdu:'بَین'},{word:'CAN',emoji:'🥫',urdu:'کَین'},{word:'DAN',emoji:'👨',urdu:'ڈَین'},{word:'FAN',emoji:'🪭',urdu:'فَین'},{word:'MAN',emoji:'👨',urdu:'مَین'},{word:'PAN',emoji:'🍳',urdu:'پَین'},{word:'RAN',emoji:'🏃',urdu:'رَین'},{word:'TAN',emoji:'🟤',urdu:'ٹَین'},{word:'VAN',emoji:'🚐',urdu:'وَین'},{word:'BAM',emoji:'💥',urdu:'بَیم'},{word:'HAM',emoji:'🍖',urdu:'ہَیم'},{word:'JAM',emoji:'🍓',urdu:'جَیم'},{word:'PAM',emoji:'👩',urdu:'پَیم'},{word:'RAM',emoji:'🐏',urdu:'رَیم'},{word:'SAM',emoji:'👨',urdu:'سَیم'},{word:'YAM',emoji:'🍠',urdu:'یَیم'},{word:'CAP',emoji:'🧢',urdu:'کَیپ'},{word:'GAP',emoji:'↔️',urdu:'گَیپ'},{word:'LAP',emoji:'🏁',urdu:'لَیپ'},{word:'MAP',emoji:'🗺️',urdu:'مَیپ'},{word:'NAP',emoji:'😴',urdu:'نَیپ'},{word:'RAP',emoji:'🎤',urdu:'رَیپ'},{word:'SAP',emoji:'🌳',urdu:'سَیپ'},{word:'TAP',emoji:'🚰',urdu:'ٹَیپ'},{word:'ZAP',emoji:'⚡',urdu:'زَیپ'},{word:'BAG',emoji:'👜',urdu:'بَیگ'},{word:'GAG',emoji:'🤐',urdu:'گَیگ'},{word:'HAG',emoji:'🧙',urdu:'ہَیگ'},{word:'LAG',emoji:'🐌',urdu:'لَیگ'},{word:'NAG',emoji:'😠',urdu:'نَیگ'},{word:'RAG',emoji:'🧹',urdu:'رَیگ'},{word:'SAG',emoji:'📉',urdu:'سَیگ'},{word:'TAG',emoji:'🏷️',urdu:'ٹَیگ'},{word:'WAG',emoji:'🐕',urdu:'وَیگ'},{word:'BAD',emoji:'👎',urdu:'بَیڈ'},{word:'DAD',emoji:'👨',urdu:'ڈَیڈ'},{word:'HAD',emoji:'✅',urdu:'ہَیڈ'},{word:'LAD',emoji:'👦',urdu:'لَیڈ'},{word:'MAD',emoji:'😠',urdu:'مَیڈ'},{word:'PAD',emoji:'📝',urdu:'پَیڈ'},{word:'SAD',emoji:'😢',urdu:'سَیڈ'},{word:'PLAN',emoji:'📋',urdu:'پلَین'},{word:'SCAN',emoji:'📱',urdu:'سکَین'},{word:'SLAM',emoji:'🚪',urdu:'سلَیم'},{word:'GRAM',emoji:'⚖️',urdu:'گرَیم'},{word:'CLAP',emoji:'👏',urdu:'کلَیپ'},{word:'SNAP',emoji:'📸',urdu:'سنَیپ'},{word:'TRAP',emoji:'🪤',urdu:'ٹرَیپ'},{word:'BRAG',emoji:'😎',urdu:'برَیگ'},{word:'FLAG',emoji:'🚩',urdu:'فلَیگ'},{word:'BRAT',emoji:'😤',urdu:'برَیٹ'},{word:'CHAT',emoji:'💬',urdu:'چَیٹ'},{word:'FLAT',emoji:'📏',urdu:'فلَیٹ'},{word:'GNAT',emoji:'🦟',urdu:'نَیٹ'},{word:'PLAT',emoji:'🗺️',urdu:'پلَیٹ'},{word:'SCAT',emoji:'🏃',urdu:'سکَیٹ'},{word:'SLAT',emoji:'🪟',urdu:'سلَیٹ'},{word:'SPAT',emoji:'💢',urdu:'سپَیٹ'},{word:'STAT',emoji:'📊',urdu:'سٹَیٹ'},{word:'THAT',emoji:'👈',urdu:'دَیٹ'},{word:'COMBAT',emoji:'⚔️',urdu:'کمبَیٹ'},{word:'FORMAT',emoji:'📄',urdu:'فارمَیٹ'},{word:'TOMCAT',emoji:'🐈',urdu:'ٹَم کَیٹ'},{word:'BOBCAT',emoji:'🐆',urdu:'بَب کَیٹ'},{word:'MUSKRAT',emoji:'🐀',urdu:'مَسک رَیٹ'},{word:'HABITAT',emoji:'🏠',urdu:'ہَبی ٹَیٹ'},{word:'ACROBAT',emoji:'🤸',urdu:'ایکرو بَیٹ'}];
-        let i=0,c=[],t=null;
-        const m=document.getElementById('menuScreen'),g=document.getElementById('gameScreen'),s=document.getElementById('startBtn'),b=document.getElementById('targetBoxes'),l=document.getElementById('letterTiles'),o=document.getElementById('successOverlay'),x=document.getElementById('successText'),n=document.getElementById('instruction'),e=document.getElementById('wordImage'),p=document.getElementById('progress'),k=document.getElementById('speakBtn'),z=document.getElementById('nextBtn'),a=new(window.AudioContext||window.webkitAudioContext)();
+        let i=0,c=[],t=null,selectedLang='ur-PK';
+        const m=document.getElementById('menuScreen'),g=document.getElementById('gameScreen'),s=document.getElementById('startBtn'),b=document.getElementById('targetBoxes'),l=document.getElementById('letterTiles'),o=document.getElementById('successOverlay'),x=document.getElementById('successText'),n=document.getElementById('instruction'),e=document.getElementById('wordImage'),p=document.getElementById('progress'),k=document.getElementById('speakBtn'),z=document.getElementById('nextBtn'),v=document.getElementById('voiceSelect'),a=new(window.AudioContext||window.webkitAudioContext)();
         
-        function speak(txt,isW=false){if('speechSynthesis'in window){speechSynthesis.cancel();const sp=()=>{let t=txt;if(isW){const d=w[i];t=`آمنہ، یہ ${d.urdu} ہے۔ ${txt}`;}const u=new SpeechSynthesisUtterance(t);u.rate=0.8;u.pitch=1.2;u.volume=1;u.lang='ur-PK';const v=speechSynthesis.getVoices();const uv=v.find(voice=>voice.lang.includes('ur')||voice.lang.includes('UR'));if(uv)u.voice=uv;speechSynthesis.speak(u);};const v=speechSynthesis.getVoices();if(v.length===0)speechSynthesis.onvoiceschanged=sp;else sp();}}
+        function speak(txt,isW=false){if('speechSynthesis'in window){speechSynthesis.cancel();const sp=()=>{let t=txt;if(isW&&selectedLang.includes('ur')){const d=w[i];t=`آمنہ، یہ ${d.urdu} ہے۔ ${txt}`;}else if(isW){t=`Aamena, this is ${txt}`;}const u=new SpeechSynthesisUtterance(t);u.rate=0.8;u.pitch=1.2;u.volume=1;u.lang=selectedLang;const voices=speechSynthesis.getVoices();const matchVoice=voices.find(voice=>voice.lang.includes(selectedLang.split('-')[0]));if(matchVoice)u.voice=matchVoice;speechSynthesis.speak(u);};const voices=speechSynthesis.getVoices();if(voices.length===0)speechSynthesis.onvoiceschanged=sp;else sp();}}
         
         function playSound(){const notes=[[523.25,0.15],[659.25,0.15],[783.99,0.15],[1046.50,0.3]];notes.forEach((note,idx)=>{const[freq,dur]=note;const osc=a.createOscillator();const gain=a.createGain();osc.connect(gain);gain.connect(a.destination);osc.frequency.setValueAtTime(freq,a.currentTime+idx*0.15);osc.type='triangle';gain.gain.setValueAtTime(0.3,a.currentTime+idx*0.15);gain.gain.exponentialRampToValueAtTime(0.01,a.currentTime+idx*0.15+dur);osc.start(a.currentTime+idx*0.15);osc.stop(a.currentTime+idx*0.15+dur);});}
         
         function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
         
-        function load(idx){if(idx>=w.length){x.textContent='🏆 مبارک ہو آمنہ! 🏆';o.classList.add('show');speak('واہ آمنہ! تم نے بہت اچھا کیا۔');z.style.display='none';return;}const d=w[idx];const word=d.word;const len=word.length;c=new Array(len).fill('');o.classList.remove('show');e.textContent=d.emoji;n.textContent=`لفظ: ${word}`;p.textContent=`${idx+1} / ${w.length}`;b.innerHTML='';for(let j=0;j<len;j++){const box=document.createElement('div');box.className='target-box';box.dataset.position=j;b.appendChild(box);}const letters=word.split('');const sh=shuffle(letters);if(sh.join('')===word&&len>2)sh.reverse();l.innerHTML='';sh.forEach((letter,idx)=>{const tile=document.createElement('div');tile.className='letter-tile';tile.dataset.letter=letter;tile.dataset.tileId=idx;tile.textContent=letter;tile.addEventListener('touchstart',tStart,{passive:false});tile.addEventListener('touchmove',tMove,{passive:false});tile.addEventListener('touchend',tEnd,{passive:false});tile.addEventListener('mousedown',mDown);l.appendChild(tile);});setTimeout(()=>speak(word,true),500);}
+        function load(idx){if(idx>=w.length){x.textContent='🏆 Congratulations Aamena! 🏆';o.classList.add('show');speak(selectedLang.includes('ur')?'واہ آمنہ! تم نے بہت اچھا کیا۔':'Amazing job Aamena! You did it!');z.style.display='none';return;}const d=w[idx];const word=d.word;const len=word.length;c=new Array(len).fill('');o.classList.remove('show');e.textContent=d.emoji;n.textContent=`Spell: ${word}`;p.textContent=`Word ${idx+1} of ${w.length}`;b.innerHTML='';for(let j=0;j<len;j++){const box=document.createElement('div');box.className='target-box';box.dataset.position=j;b.appendChild(box);}const letters=word.split('');const sh=shuffle(letters);if(sh.join('')===word&&len>2)sh.reverse();l.innerHTML='';sh.forEach((letter,idx)=>{const tile=document.createElement('div');tile.className='letter-tile';tile.dataset.letter=letter;tile.dataset.tileId=idx;tile.textContent=letter;tile.addEventListener('touchstart',tStart,{passive:false});tile.addEventListener('touchmove',tMove,{passive:false});tile.addEventListener('touchend',tEnd,{passive:false});tile.addEventListener('mousedown',mDown);l.appendChild(tile);});setTimeout(()=>speak(word,true),500);}
         
         function tStart(e){e.preventDefault();t=e.target;t.classList.add('dragging');}
         
@@ -342,11 +390,12 @@
         
         function mDown(e){t=e.target;t.classList.add('dragging');const mv=(e)=>{const el=document.elementFromPoint(e.clientX,e.clientY);document.querySelectorAll('.target-box').forEach(box=>box.classList.remove('drag-over'));if(el&&el.classList.contains('target-box'))el.classList.add('drag-over');};const up=(e)=>{const el=document.elementFromPoint(e.clientX,e.clientY);t.classList.remove('dragging');if(el&&el.classList.contains('target-box')&&!el.textContent){const letter=t.dataset.letter;const pos=parseInt(el.dataset.position);el.textContent=letter;el.classList.add('filled');el.classList.remove('drag-over');c[pos]=letter;t.classList.add('hidden');check();}document.querySelectorAll('.target-box').forEach(box=>box.classList.remove('drag-over'));document.removeEventListener('mousemove',mv);document.removeEventListener('mouseup',up);t=null;};document.addEventListener('mousemove',mv);document.addEventListener('mouseup',up);}
         
-        function check(){if(c.every(letter=>letter!=='')){const correct=w[i].word;const d=w[i];if(c.join('')===correct){setTimeout(()=>{x.textContent=`شاباش آمنہ! ${d.urdu}`;o.classList.add('show');playSound();setTimeout(()=>speak(`بہت خوب آمنہ! تم نے ${d.urdu} صحیح لکھا!`),300);setTimeout(()=>{o.classList.remove('show');i++;load(i);},3000);},300);}else{setTimeout(()=>{document.querySelectorAll('.target-box').forEach(box=>box.style.animation='shake 0.5s');speak('آمنہ، دوبارہ کوشش کریں');setTimeout(()=>reset(),500);},300);}}}
+        function check(){if(c.every(letter=>letter!=='')){const correct=w[i].word;const d=w[i];if(c.join('')===correct){setTimeout(()=>{x.textContent=`Great Job Aamena!`;o.classList.add('show');playSound();setTimeout(()=>speak(selectedLang.includes('ur')?`بہت خوب آمنہ! تم نے ${d.urdu} صحیح لکھا!`:`Perfect Aamena! You spelled ${correct} correctly!`),300);setTimeout(()=>{o.classList.remove('show');i++;load(i);},3000);},300);}else{setTimeout(()=>{document.querySelectorAll('.target-box').forEach(box=>box.style.animation='shake 0.5s');speak(selectedLang.includes('ur')?'آمنہ، دوبارہ کوشش کریں':'Aamena, try again');setTimeout(()=>reset(),500);},300);}}}
         
         function reset(){const len=w[i].word.length;c=new Array(len).fill('');document.querySelectorAll('.target-box').forEach(box=>{box.textContent='';box.classList.remove('filled');box.style.animation='';});document.querySelectorAll('.letter-tile').forEach(tile=>tile.classList.remove('hidden'));}
         
-        s.addEventListener('click',()=>{m.classList.remove('active');g.classList.add('active');speak('آمنہ، آؤ الفاظ سیکھیں!');load(0);});
+        v.addEventListener('change',()=>{selectedLang=v.value;});
+        s.addEventListener('click',()=>{m.classList.remove('active');g.classList.add('active');speak(selectedLang.includes('ur')?'آمنہ، آؤ الفاظ سیکھیں!':'Aamena, let\'s learn words!');load(0);});
         k.addEventListener('click',()=>{if(i<w.length)speak(w[i].word,true);});
         z.addEventListener('click',()=>{i++;load(i);});
         if('speechSynthesis'in window)speechSynthesis.getVoices();
